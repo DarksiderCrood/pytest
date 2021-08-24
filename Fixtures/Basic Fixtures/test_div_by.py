@@ -9,6 +9,7 @@ def inp_val():
 def test_divisible_by_5(inp_val):
    assert inp_val % 5 == 0
 
+
 def test_divisible_by_2(inp_val):
    assert inp_val % 2 == 0
 
