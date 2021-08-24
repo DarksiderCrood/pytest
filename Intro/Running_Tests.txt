@@ -1,0 +1,4 @@
+To run all tests files and functions: pytest -v
+To Run Specific test file: pytest <filename> -v
+To execute the tests containing a string (sub string match): pytest -k <substring> -v
+To execute the tests by grouping the Tests with markers @pytest.mark.<markername>: pytest -m <marker> -v

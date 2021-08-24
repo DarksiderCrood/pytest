@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="2" tests="23" time="0.700" timestamp="2021-08-24T23:44:48.248458" hostname="DxeRam"><testcase classname="Fixtures.Basic Fixtures.test_div_by" name="test_divisible_by_5" time="0.004" /><testcase classname="Fixtures.Basic Fixtures.test_div_by" name="test_divisible_by_2" time="0.004"><failure message="assert 1 == 0&#10;  +1&#10;  -0">inp_val = 15
+
+    def test_divisible_by_2(inp_val):
+&gt;      assert inp_val % 2 == 0
+E      assert 1 == 0
+E        +1
+E        -0
+
+Fixtures\Basic Fixtures\test_div_by.py:13: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_comparison" name="test_greaternum" time="0.005"><failure message="assert 1000 &gt; 1000">@pytest.mark.greater
+    def test_greaternum():
+       num = 1000
+&gt;      assert num &gt; 1000
+E      assert 1000 &gt; 1000
+
+Tests\Basic Tests\test_comparison.py:7: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_comparison" name="test_greaternum_equal" time="0.004" /><testcase classname="Tests.Basic Tests.test_comparison" name="test_lessnum" time="0.004" /><testcase classname="Tests.Basic Tests.test_maxfail" name="test_srt_1" time="0.007"><failure message="assert 4.795831523312719 == 5&#10;  +4.795831523312719&#10;  -5">def test_srt_1():
+       num = 23
+&gt;      assert math.sqrt(num) == 5
+E      assert 4.795831523312719 == 5
+E        +4.795831523312719
+E        -5
+
+Tests\Basic Tests\test_maxfail.py:6: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_maxfail" name="test_srqt_2" time="0.005"><failure message="assert 41 == 40&#10;  +41&#10;  -40">def test_srqt_2():
+       num = 7
+&gt;      assert 7*7-8 == 40
+E      assert 41 == 40
+E        +41
+E        -40
+
+Tests\Basic Tests\test_maxfail.py:10: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_maxfail" name="test_eql_to" time="0.002"><failure message="assert 101 == 111&#10;  +101&#10;  -111">def test_eql_to():
+&gt;      assert 101 == 111
+E      assert 101 == 111
+E        +101
+E        -111
+
+Tests\Basic Tests\test_maxfail.py:13: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_parameterized" name="test_parametrize_1[1-3]" time="0.003" /><testcase classname="Tests.Basic Tests.test_parameterized" name="test_parametrize_1[2-6]" time="0.003" /><testcase classname="Tests.Basic Tests.test_parameterized" name="test_parametrize_1[3-8]" time="0.005"><failure message="assert 9 == 8&#10;  +9&#10;  -8">num = 3, output = 8
+
+    @pytest.mark.parametrize("num, output",[(1,3),(2,6),(3,8),(4,12)])
+    def test_parametrize_1(num, output):
+&gt;      assert 3*num == output
+E      assert 9 == 8
+E        +9
+E        -8
+
+Tests\Basic Tests\test_parameterized.py:6: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_parameterized" name="test_parametrize_1[4-12]" time="0.003" /><testcase classname="Tests.Basic Tests.test_skip_xfail" name="test_grt" time="0.003"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="Tests.Basic Tests.test_skip_xfail" name="test_grt_equal" time="0.002" /><testcase classname="Tests.Basic Tests.test_skip_xfail" name="test_small" time="0.003"><skipped type="pytest.skip" message="unconditional skip">C:\Users\DXZ\Documents\GitHub\Pytest\Tests\Basic Tests\test_skip_xfail.py:18: unconditional skip</skipped></testcase><testcase classname="Tests.Basic Tests.test_skip_xfail" name="test_small_equal" time="0.002" /><testcase classname="Tests.Basic Tests.test_square_cube" name="test_sqroot" time="0.004" /><testcase classname="Tests.Basic Tests.test_square_cube" name="testsquarenum" time="0.003"><failure message="assert 5041 == 401&#10;  +5041&#10;  -401">@pytest.mark.square
+    def testsquarenum(): # this will run
+       num = 71
+&gt;      assert 71*71 == 401 # failed with sign F
+E      assert 5041 == 401
+E        +5041
+E        -401
+
+Tests\Basic Tests\test_square_cube.py:13: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_square_cube" name="test_cubenum" time="0.004" /><testcase classname="Tests.Basic Tests.test_using_conftest_1" name="test_divisible_by_4" time="0.003" /><testcase classname="Tests.Basic Tests.test_using_conftest_1" name="test_divisible_by_2" time="0.002" /><testcase classname="Tests.Basic Tests.test_using_conftest_2" name="test_divisible_by_5" time="0.004"><failure message="assert 4 == 0&#10;  +4&#10;  -0">value = 24
+
+    @pytest.mark.div
+    def test_divisible_by_5(value):
+&gt;      assert value % 5 == 0
+E      assert 4 == 0
+E        +4
+E        -0
+
+Tests\Basic Tests\test_using_conftest_2.py:6: AssertionError</failure></testcase><testcase classname="Tests.Basic Tests.test_using_conftest_2" name="test_divisible_by_12" time="0.003" /></testsuite></testsuites>

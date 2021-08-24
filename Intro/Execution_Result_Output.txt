@@ -1,0 +1,2 @@
+Intro:
+    pytest test_multiplication.py -v --junitxml="result.xml"

@@ -1,0 +1,13 @@
+Intro:
+    In a real scenario, once a new version of the code is ready to deploy, it is first deployed
+    into pre-prod/ staging environment. Then a test suite runs on it.
+
+    The code is qualified for deploying to production only if the test suite passes. 
+    If there is test failure, whether it is one or many, the code is not production ready.
+
+    Therefore, what if we want to stop the execution of test suite soon after n number of test fails. 
+    This can be done in pytest using maxfail.
+
+    The syntax to stop the execution of test suite soon after n number of test fails is as follows −
+    pytest --maxfail = <num>
+    eg: pytest test_maxfail.py -v --maxfail 1
